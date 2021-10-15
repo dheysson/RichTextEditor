@@ -8,6 +8,7 @@
     <title>Rich Text Editor</title>
 </head>
 <body onload="enableEditMode()" id="body">
+
     <div id="toggle-mode">
         <a id="teste">Dark Mode</a>
         <br>
@@ -16,25 +17,25 @@
 
     <div class="wrapper">
         <div class="container">
-            <button id="btn" onclick="execCmd('bold')"><i class="fas fa-bold"></i></button>
-            <button id="btn" onclick="execCmd('italic')"><i class="fas fa-italic"></i></i></i></button>
-            <button id="btn" onclick="execCmd('underline')"><i class="fas fa-underline"></i></button>
-            <button id="btn" onclick="execCmd('undo')"><i class="fas fa-undo"></i></button>
-            <button id="btn" onclick="execCmd('redo')"><i class="fa fa-repeat"></i></button>
-            <button id="btn" onclick="execCmd('strikeThrough')"><i class="fa fa-strikethrough"></i></button>
+            <button id="btn" onclick="execCmd('bold')" title="negrito"><i class="fas fa-bold"></i></button>
+            <button id="btn" onclick="execCmd('italic')" title="itálico"><i class="fas fa-italic"></i></i></i></button>
+            <button id="btn" onclick="execCmd('underline')" title="inserir sublinhado"><i class="fas fa-underline"></i></button>
+            <button id="btn" onclick="execCmd('undo')" title="voltar"><i class="fas fa-undo"></i></button>
+            <button id="btn" onclick="execCmd('redo')" title="refazer"><i class="fa fa-repeat"></i></button>
+            <button id="btn" onclick="execCmd('strikeThrough')" title="risco"><i class="fa fa-strikethrough"></i></button>
             <button id="btn" onclick="execCmd('justifyLeft')"><i class="fa fa-align-left"></i></button>
             <button id="btn" onclick="execCmd('justifyRight')"><i class="fa fa-align-right"></i></button>
             <button id="btn" onclick="execCmd('justifyCenter')"><i class="fa fa-align-center"></i></button>
             <button id="btn" onclick="execCmd('justifyFull')"><i class="fa fa-align-justify"></i></button>
-            <button id="btn" onclick="execCmd('cut')"><i class="fa fa-cut"></i></button>
-            <button id="btn" onclick="execCmd('copy')"><i class="fa fa-copy"></i></button>
+            <button id="btn" onclick="execCmd('cut')" title="cortar"><i class="fa fa-cut"></i></button>
+            <button id="btn" onclick="execCmd('copy')" title="copiar"><i class="fa fa-copy"></i></button>
             <button id="btn" onclick="execCmd('indent')"><i class="fa fa-indent"></i></button>
             <button id="btn" onclick="execCmd('outdent')"><i class="fa fa-dedent"></i></button>
-            <button id="btn" onclick="execCmd('insertUnorderedList')"><i class="fa fa-list-ul"></i></button>
-            <button id="btn" onclick="execCmd('insertOrderedList')"><i class="fa fa-list-ol"></i></button>
-            <button id="btn" onclick="execCmd('insertParagraph')"><i class="fa fa-paragraph"></i></button>
-            <button id="btn" onclick="execCmd('insertHorizontalRule')">HR</button>
-            <button id="btn" onclick="execCmd('createLink', prompt('URL','http://'))"><i class="fa fa-link"></i></button>
+            <button id="btn" onclick="execCmd('insertUnorderedList')" title="inserir lista não ordenada"><i class="fa fa-list-ul"></i></button>
+            <button id="btn" onclick="execCmd('insertOrderedList')" title="inserir lista ordenada"><i class="fa fa-list-ol"></i></button>
+            <button id="btn" onclick="execCmd('insertParagraph')" title="inserir parágrafo"><i class="fa fa-paragraph"></i></button>
+            <button id="btn" onclick="execCmd('insertHorizontalRule')" title="inserir linha horizontal">-</button>
+            <button id="btn" onclick="execCmd('createLink', prompt('URL','http://'))" title="inserir hyper-link"><i class="fa fa-link"></i></button>
             <button id="btn" onclick="execCmd('unlink')"><i class="fa fa-unlink"></i></button>
             <button id="btn" onclick="execCmd('formatBlock','<H1>')">H1</button>
             <button id="btn" onclick="execCmd('formatBlock','<H2>')">H2</button>
@@ -55,9 +56,8 @@
                 <option style="font-family: Verdana;" value="Verdana">Verdana</option>
             </select>
         </div>
-        <iframe id="TextArea" name="richTextField" style="width: 1200px; height: 500px;"></iframe> 
+        <iframe contenteditable="true" id="TextArea" name="richTextField" style="width: 1200px; height: 500px;"></iframe>
     </div>
-    
     <script src="https://kit.fontawesome.com/466c0784ad.js" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
