@@ -2,4 +2,4 @@
 Rich Text Editor made with HTML + CSS + Javascript
 
 acesse o projeto:
-http://flamboyant-chandrasekhar-0e0c6a.netlify.app/
+https://hungry-kilby-2ed4ce.netlify.app/
